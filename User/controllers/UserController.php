@@ -23,10 +23,10 @@ class UserController
                 $_SESSION['username'] = $user_name;
 
                 $this->model->saveSession($user_id, session_id());#세션값을전달
-                header('Location: index.php?controller=user&action=login'); // index.php로 리디렉션
+                header('Location: index.php?controller=user&action=main'); // index.php로 리디렉션
                 exit();
                 }else{
-                echo "로그인 실패 : 잘못된 사용자 또는 비밀번호 입니다.";
+                #echo "로그인 실패 : 잘못된 사용자 또는 비밀번호 입니다.";
                 include "User/views/login.php";
             }
         }else{
@@ -42,7 +42,7 @@ class UserController
 
 
         $this->model->deleteSession($session_id);
-        header('Location: index.php?controller=user&action=login');
+        header('Location: index.php?controller=user&action=main');
 
         exit();
     }
@@ -57,6 +57,9 @@ class UserController
         }else{
             include 'User/views/signup.php';
         }
+    }
+    public function main(){
+        include 'User/views/main.php';
     }
 }
 ?>

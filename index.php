@@ -9,7 +9,11 @@ if (isset($_GET['controller']) && $_GET['controller'] === 'user') {
         $controller->logout();
     }else if (isset($_GET['action']) && $_GET['action'] === 'signup') {
         $controller->signup();
+    }else if (isset($_GET['action']) && $_GET['action'] === 'main'){
+        $controller->main();
     }
-
+}else{
+    $controller->main();
 }
+
 ?>
