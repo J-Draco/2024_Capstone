@@ -11,6 +11,10 @@ if (isset($_GET['controller']) && $_GET['controller'] === 'user') {
         $controller->signup();
     }else if (isset($_GET['action']) && $_GET['action'] === 'main'){
         $controller->main();
+    }else if (isset($_GET['action']) && $_GET['action'] === 'checkDuplication'){
+        $controller->checkDuplication();
+    }else if(isset($_GET['action']) && $_GET['action'] === 'boardlist'){
+        $controller->boradlist();
     }
 }else{
     $controller->main();

@@ -58,8 +58,25 @@ class UserController
             include 'User/views/signup.php';
         }
     }
+    public function checkDuplication() {
+        if (isset($_POST['username'])) {
+            $isAvailable = $this->model->checkDuplication($_POST['username']);
+
+            if ($isAvailable) { // 존재하는 경우
+                echo "unavailable"; // 이미 존재하는 아이디
+            } else { // 존재하지 않는 경우
+                echo "available"; // 사용 가능한 아이디
+            }
+        } else {
+            echo "아이디를 입력하세요."; // 사용자 ID가 비어있는 경우
+        }
+    }
     public function main(){
         include 'User/views/main.php';
     }
+    public function boardlist(){
+
+    }
 }
 ?>
+

@@ -40,7 +40,14 @@
             $query->bind_param("ss",$user_name,$hashed_pw);
             $query->execute();
         }
+        public function checkDuplication($username) {
+            $query = $this->db->prepare("SELECT * FROM user_info WHERE user_id = ?");
+            $query->bind_param("s", $username);
+            $query->execute();
+            $result = $query->get_result();
 
+            return $result->num_rows > 0; // 아이디가 존재하면 true, 아니면 false
+        }
 
 
     }
