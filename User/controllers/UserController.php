@@ -77,6 +77,22 @@ class UserController
     public function boardlist(){
 
     }
+    public function problem(){
+        if(isset($_SESSION['username'])) {
+            $username=$_SESSION['username'];
+            $session_value = session_id();
+
+            $jwt_token = $this->model->createJwtToken($username, $session_value);
+            header('Location: http://192.0.0.2:8082/index.php?token=' . urlencode($jwt_token));
+            exit();
+        }else{
+            echo "<script>
+                alert('로그인 후 이용해 주세요.');
+                window.location.href='index.php?controller=user&action=login'
+                </script>";
+            exit();
+        }
+    }
 }
 ?>
 

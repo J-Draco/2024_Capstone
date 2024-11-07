@@ -6,7 +6,7 @@
 require_once ('nav.php');
 ?><section class="vh-100">
     <div class="container py-5">
-        <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="row d-flex justify-content-center align-items-center">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5 text-center">
     <div class="card border-dark mb-3" style="max-width: 100rem;">
         <div class="card-header text-center">로그인</div>

@@ -15,6 +15,8 @@ if (isset($_GET['controller']) && $_GET['controller'] === 'user') {
         $controller->checkDuplication();
     }else if(isset($_GET['action']) && $_GET['action'] === 'boardlist'){
         $controller->boradlist();
+    }else if(isset($_GET['action']) && $_GET['action'] === 'problem'){
+        $controller->problem();
     }
 }else{
     $controller->main();

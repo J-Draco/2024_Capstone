@@ -12,7 +12,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="btn btn-light btn-sm" aria-current="page" href="#">문제집</a>
+                    <a class="btn btn-light btn-sm" aria-current="page" href="/index.php?controller=user&action=problem">문제집</a>
                 </li>
                 <li class="nav-item">
                     <a class="btn btn-light btn-sm" href="#">해답지</a>
