@@ -26,8 +26,10 @@ class UserController
                 header('Location: index.php?controller=user&action=main'); // index.php로 리디렉션
                 exit();
                 }else{
-                #echo "로그인 실패 : 잘못된 사용자 또는 비밀번호 입니다.";
-                include "User/views/login.php";
+                echo "<script>
+                 alert('아이디 또는 비밀번호를 확인해주세요..');
+                window.location.href = 'index.php?controller=user&action=login ';
+                    </script>";
             }
         }else{
             include "User/views/login.php";

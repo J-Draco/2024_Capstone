@@ -51,17 +51,36 @@
 
 
         public function createJwtToken($username,$session_value){
-            $secret_key = 'seoungmin';
+            $symmetricKey = openssl_random_pseudo_bytes(32);
+
+            // 1번 서버의 개인 키로 서명하기 위해 로드
+            $private_key = openssl_pkey_get_private(file_get_contents('User/config/private_key1.pem'));
+
+            // 2번 서버의 공개 키로 암호화하기 위해 로드
+            $public_key = openssl_pkey_get_public(file_get_contents('User/config/public_key.pem'));
+
             $header = json_encode(['alg'=>'HS256','typ'=>'JWT']);
             $payload = json_encode(['username'=>$username,'session_value'=>$session_value]);
+
 
             $base64UrlHeader = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($header));
             $base64UrlPayload = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($payload));
 
-            $signature = hash_hmac('sha256', $base64UrlHeader . "." . $base64UrlPayload, $secret_key, true);
+
+            //대칭키로 페이로드 암호화
+            $encryptedPayload = openssl_encrypt($base64UrlPayload, 'aes-256-cbc', $symmetricKey, 0, substr($symmetricKey, 0, 16));
+            $base64UrlEncryptedPayload = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($encryptedPayload));
+
+
+            // 대칭키를 2번 서버의 공개 키로 페이로드 암호화
+            openssl_public_encrypt($symmetricKey, $encryptedSymmetricKey, $public_key);
+            $base64UrlEncryptedSymmetricKey = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($encryptedSymmetricKey));
+
+            // 1번 서버의 개인 키로 서명 생성
+            openssl_sign($base64UrlHeader . "." . $base64UrlEncryptedSymmetricKey, $signature, $private_key, OPENSSL_ALGO_SHA256);
             $base64UrlSignature = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($signature));
 
-            return $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
+            return $base64UrlHeader . "." . $base64UrlEncryptedPayload . "." . $base64UrlEncryptedSymmetricKey . "." . $base64UrlSignature;
         }
 
     }

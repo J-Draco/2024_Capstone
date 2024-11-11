@@ -106,6 +106,6 @@ require_once ('nav.php');
         });
     })();
 </script>
-
+<?php include 'footer.php';?>
 </body>
 </html>

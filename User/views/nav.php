@@ -7,23 +7,20 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="/index.php">
-            LOGO
+            <img src="/public/resources/Logo.png" alt="LOGO" width="130px" height="auto">
         </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="btn btn-light btn-sm" aria-current="page" href="/index.php?controller=user&action=problem">문제집</a>
+                <li class="nav-item mt-2">
+                    <a class="btn btn-light btn-sm" aria-current="page" href="/index.php?controller=user&action=problem">문제</a>
                 </li>
-                <li class="nav-item">
-                    <a class="btn btn-light btn-sm" href="#">해답지</a>
-                </li>
-                <li class="nav-item">
+                <li class="nav-item mt-2">
                     <a class="btn btn-light btn-sm" href="#">랭킹</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item mt-2">
                     <a class="btn btn-light btn-sm" href="#">사용가이드</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item mt-2">
                     <a class="btn btn-light btn-sm" href="#">게시판</a>
                 </li>
 
@@ -31,10 +28,10 @@
                 if(isset($_SESSION['username'])){
 
                     echo '<li><div class="btn-group">
-                            <form class="d-flex ms-2">
+                            <form class="d-flex ms-2 mt-2">
                       <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="true">'
                         .$_SESSION['username'].
-                      '</button>
+                        '</button>
                       <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -48,12 +45,12 @@
 
                 }else{
                     echo '<li class="nav-item">
-                    <form class="d-flex ms-2">
+                    <form class="d-flex ms-2 mt-2">
                         <a class="btn btn-outline-secondary btn-sm" href="/index.php?controller=user&action=login">Sign in</a>
                     </form>
                 </li>
                 <li class="nav-item">
-                    <form class="d-flex ms-2 " >
+                    <form class="d-flex ms-2 mt-2" >
                         <a class="btn btn-dark btn-sm" href="/index.php?controller=user&action=signup">Register</a>
                     </form>
                 </li>';
@@ -66,4 +63,7 @@
     </div>
 </nav>
 
+
 </body>
+
+
