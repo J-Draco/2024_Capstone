@@ -20,7 +20,6 @@ require_once ('nav.php');
         <div class="row d-flex justify-content-center ">
 
             <div class="col-12 col-md-8 col-sm-6 col-xl-5 text-left" style="max-width: 330px">
-                <img  class="mb-4 " src="/public/resources/Logo.png" alt="" width="160px" height="auto" >
                 <div class=" border-dark mb-3" style="max-width: 100rem;">
 
                     <div class="card-body">
@@ -46,10 +45,9 @@ require_once ('nav.php');
                         </form>
                         <div class="row d-flex justify-content-center mt-3" >
                             <ul class="nav col row  justify-content-center find">
+
                                 <li class="nav-item mb-2 col row d-flex">
-                                    <a class="nav-link" href="findid.php">아이디 찾기</a></li>
-                                <li class="nav-item mb-2 col row d-flex">
-                                    <a class="nav-link" href="findpw.php">비밀번호 찾기</a></li>
+                                    <a class="nav-link text-end" href="findpw.php">비밀번호 찾기</a></li>
                             </ul>
                         </div>
                     </div>

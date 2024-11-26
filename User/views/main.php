@@ -1,3 +1,7 @@
+
+<head>
+    <title>CodeXGuard</title>
+</head>
 <body class="bg-black">
 <div class="bg-black">
     <?php

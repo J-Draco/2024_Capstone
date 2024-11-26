@@ -21,7 +21,7 @@
                     <a class="btn btn-light btn-sm" href="#">사용가이드</a>
                 </li>
                 <li class="nav-item mt-2">
-                    <a class="btn btn-light btn-sm" href="#">게시판</a>
+                    <a class="btn btn-light btn-sm" href="/index.php?controller=user&action=board">게시판</a>
                 </li>
 
                 <?php

@@ -25,13 +25,13 @@
         <div class="col mb-3">
             <h5 class="text-light">Main</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">랭킹</a></li>
+                <li class="nav-item mb-2"><a href="/index.php?controller=user&action=board" class="nav-link p-0 text-light">랭킹</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">게시판</a></li>
             </ul>
         </div>
 
         <div class="col mb-3">
-            <h5 class="text-light">vulnerabilities</h5>
+            <h5 class="text-light">Vulnerabilities</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="/index.php?controller=user&action=problem" class="nav-link p-0 text-light">문제</a></li>
             </ul>
