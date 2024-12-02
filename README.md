@@ -1,3 +1,2 @@
 # 2024_Capstone
-## Python : Included library
-- requests
+## 61.245.248.211
