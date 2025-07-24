@@ -1,0 +1,70 @@
+# OS 생성 파일
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE 설정 파일
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.komodotools/
+.eclipse/
+.settings/
+.project
+.buildpath
+.netbeans/
+nbproject/
+
+# PHP 관련 파일
+/vendor/
+composer.phar
+/node_modules/
+npm-debug.log
+yarn-error.log
+
+# 환경 설정 파일 (보안 정보 포함)
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+
+# 보안 키 파일
+*.pem
+*.key
+*.crt
+*.csr
+*.cer
+/src/app/config/private_key*.pem
+/src/app/config/public_key*.pem
+/src/app/config/secret*.php
+
+# 로그 파일
+*.log
+/logs/
+
+# 업로드된 파일들 (필요시 주석 처리)
+/src/uploads/*
+!/src/uploads/.gitkeep
+
+# 캐시 파일
+/bootstrap/cache/
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+
+# 백업 파일
+*.bak
+*.swp
+*.swo
+
+# 기타 불필요한 파일
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php 
