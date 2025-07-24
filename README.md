@@ -1,9 +1,11 @@
 # CodeXGuard
 
-- [CodeXGuard 발표 자료](https://www.miricanvas.com/v/13r5a5q)
+
 ## 프로젝트 소개
 
 CodeXGuard는 웹 보안 취약점을 학습하고 실습할 수 있는 교육용 플랫폼입니다. 사용자들이 안전한 환경에서 실제 웹 보안 취약점을 경험하고 이해함으로써 보안 의식을 높이고 개발 과정에서 보안을 고려할 수 있도록 설계되었습니다. 이 플랫폼은 실제 취약점 공격과 방어 기법을 직접 체험하며 학습할 수 있는 환경을 제공합니다.
+
+- [CodeXGuard 발표 자료](https://www.miricanvas.com/v/13r5a5q)
 
 ## 주요 기능
 
