@@ -1,5 +1,5 @@
 <?php
-require_once "User/controllers/UserController.php";
+require_once "src/app/controllers/UserController.php";
 $controller = new UserController();
 $controller->checkSessionTimeout();
 
