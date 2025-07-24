@@ -107,13 +107,6 @@ git clone https://github.com/yourusername/CodeXGuard.git
 - 보안 모범 사례 학습 및 적용
 - 웹 개발 과정에서의 보안 의식 향상
 
-## 연락처
-
-프로젝트에 대한 문의나 기여는 아래 연락처로 부탁드립니다:
-
-- 이메일: example@example.com
-- GitHub: [github.com/yourusername](https://github.com/yourusername)
-
 ## 프로젝트 발표 자료
 
 더 자세한 프로젝트 소개는 다음 링크에서 확인할 수 있습니다:
